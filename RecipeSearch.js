@@ -19,8 +19,7 @@ $(document).ready(function() {
     if ($('h1.page-header__title').text().indexOf('Recipes') == -1)
         return;
 
-    var $root = $('#WikiaSiteWrapper'),
-        $navbarWrapper = $('div.wds-global-navigation-wrapper'),
+    var $navbarWrapper = $('div.fandom-sticky-header'),
         $searchbarWrapper = $('<div></div>'),
         $searchbar = $('<div></div>'),
         $searchbarInner = $('<div></div>'),
@@ -74,10 +73,11 @@ $(document).ready(function() {
     });
     $searchbarWrapper.css({
         'position': 'fixed',
-        'top': navbarHeight,
+        'top': 0,
         'width': '100%',
-        'z-index': 10,
+        'z-index': 1000,
         'text-align': 'center',
+        'color': 'white',
     });
 
     $searchbarWrapper.append($searchbar);
